@@ -1,0 +1,13 @@
+{
+  "1": [
+    { "name": "Paneer", "quantity": "200g" },
+    { "name": "Onion", "quantity": "100g" },
+    { "name": "Capsicum", "quantity": "50g" },
+    { "name": "Spices", "quantity": "to taste" }
+  ],
+  "2": [
+    { "name": "Paneer", "quantity": "250g" },
+    { "name": "Tomato", "quantity": "80g" },
+    { "name": "Cream", "quantity": "50ml" }
+  ]
+}
