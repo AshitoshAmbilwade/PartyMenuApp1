@@ -4,7 +4,7 @@
     "name": "Tandoori Chicken",
     "type": "non-veg",
     "description": "Juicy chicken marinated with yogurt and spices, cooked in a tandoor.",
-    "image": "https://foodiewish.com/wp-content/uploads/2020/05/Tandoori-Chicken-Recipe.jpg",
+    "image": "https://imgs.search.brave.com/DUMmEu3rd1JnSdBIwmhleqMwTJe-vuP9KDlUKcxH3Uo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9ncmVh/dGN1cnJ5cmVjaXBl/cy5uZXQvd3AtY29u/dGVudC91cGxvYWRz/LzIwMTEvMDYvbmV3/dGFuZG9vcmNoaWNr/ZW4yLmpwZw",
     "ingredients": [
       { "name": "Chicken", "quantity": "500g" },
       { "name": "Yogurt", "quantity": "100g" },
@@ -19,7 +19,7 @@
     "name": "Dal Makhni",
     "type": "veg",
     "description": "Black lentils cooked overnight with butter and cream.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/dal-makhani-recipe.jpg",
+    "image": "https://imgs.search.brave.com/fvS8gWeRHSeyf14zuwfw0bV0BcQ0WgRTW02c3JG1OYs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vZXNwaWVzL2Vz/cGllczIyMDEvZXNw/aWVzMjIwMTAxNDY0/LzE4MTAzOTI2OC1k/YWwtbWFraGFuaS1v/ci1kYWwtbWFraG5p/LWlzLWEtbm9ydGgt/aW5kaWFuLXJlY2lw/ZS1zZXJ2ZWQtaW4t/Ym93bC1zZWxlY3Rp/dmUtZm9jdXMuanBn/P3Zlcj02",
     "ingredients": [
       { "name": "Black lentils", "quantity": "200g" },
       { "name": "Cream", "quantity": "50ml" },
@@ -34,7 +34,7 @@
     "name": "Kadhai Paneer",
     "type": "veg",
     "description": "Paneer cubes in spicy onion-tomato gravy with capsicum.",
-    "image": "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+    "image": "https://imgs.search.brave.com/cN_F3w_AUW6z3NY0iKMM92G5LxAHDP0nXGYFy2BlKvg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDg2/MDY2OTA4L3Bob3Rv/L2luZGlhbi1zdHls/ZS1jb3R0YWdlLWNo/ZWVzZS12ZWdldGFy/aWFuLWN1cnJ5LWRp/c2gta2FkYWktcGFu/ZWVyLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1UVGVvNW9v/eDZIOVk4Y3JDWXZr/MTNUSGNQcWFXazZE/LUl4MVpzT2p3S0lr/PQ",
     "ingredients": [
       { "name": "Paneer", "quantity": "200g" },
       { "name": "Onions", "quantity": "1 cup" },
@@ -49,7 +49,7 @@
     "name": "Gulab Jamun",
     "type": "veg",
     "description": "Soft khoya balls soaked in sugar syrup.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/01/gulab-jamun-recipe.jpg",
+    "image": "https://imgs.search.brave.com/u3XwvasjYNIAZ_IhQ0Exv6PpX586ir5OZZ8Vrv6r1fM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE0LzA5LzgwLzQ4/LzM2MF9GXzE0MDk4/MDQ4NjZfU2w0emVH/ZlluV1g3eVl4WEs0/aExHQmhMWXlKTHhB/YnAuanBn",
     "ingredients": [
       { "name": "Khoya", "quantity": "200g" },
       { "name": "Sugar Syrup", "quantity": "1 cup" }
@@ -63,27 +63,12 @@
     "name": "Mango Lassi",
     "type": "veg",
     "description": "Sweet mango yogurt smoothie.",
-    "image": "https://www.cookwithmanali.com/wp-content/uploads/2017/05/Mango-Lassi-500x500.jpg",
+    "image": "https://imgs.search.brave.com/LlNxom1-0x2mFA0GD-jNJ5_gVvSU0SSo_27lBRdlWog/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yYWtz/a2l0Y2hlbi5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMTQv/MDUvMTQwMzM2OTA5/OThfZDQ5NWI5Yzc2/Ml96LmpwZw",
     "ingredients": [
       { "name": "Mango Pulp", "quantity": "1 cup" },
       { "name": "Yogurt", "quantity": "1 cup" }
     ],
-    "category": "Beverage",
-    "cuisine": "North Indian",
-    "serves": 2
-  },
-  {
-    "id": 6,
-    "name": "Masala Chai",
-    "type": "veg",
-    "description": "Spiced Indian tea with milk.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/10/masala-chai-recipe.jpg",
-    "ingredients": [
-      { "name": "Tea Leaves", "quantity": "2 tsp" },
-      { "name": "Milk", "quantity": "1 cup" },
-      { "name": "Spices", "quantity": "to taste" }
-    ],
-    "category": "Beverage",
+    "category": "Sides",
     "cuisine": "North Indian",
     "serves": 2
   },
@@ -92,7 +77,7 @@
     "name": "Paneer Tikka",
     "type": "veg",
     "description": "Grilled paneer cubes marinated with yogurt and spices.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/paneer-tikka-recipe.jpg",
+    "image": "https://imgs.search.brave.com/j-ZhLQ1YlAzOmDHRaYmorVjQSkqJ4Gc3lEucWSk3dIA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEyLzE4LzgxLzY5/LzM2MF9GXzEyMTg4/MTY5MTlfcmtoZ2w3/clRmV05FMzBFejBa/OXJBME5yS0d5OXFI/cEUuanBn",
     "ingredients": [
       { "name": "Paneer", "quantity": "200g" },
       { "name": "Yogurt", "quantity": "100g" }
@@ -106,7 +91,7 @@
     "name": "Chole Bhature",
     "type": "veg",
     "description": "Spicy chickpeas served with fried bread.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/chole-bhature-recipe.jpg",
+    "image": "https://imgs.search.brave.com/wA7mIreOh5KxJQsRU7Pk6-7Tx1Iaogcsn98lYU3k3Ck/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jaG9s/ZS1iaGF0dXJlLXBv/cHVsYXItZGlzaC1u/b3J0aGVybi1hcmVh/cy1pbmRpYW4tc3Vi/Y29udGluZW50LWZv/b2QtY29tYmluYXRp/b24tY2hhbmEtbWFz/YWxhLWJoYXR1cmEt/cHVyaS0zMDEyODY1/MTEuanBn",
     "ingredients": [
       { "name": "Chickpeas", "quantity": "200g" },
       { "name": "Flour", "quantity": "200g" }
@@ -120,7 +105,7 @@
     "name": "Biryani",
     "type": "non-veg",
     "description": "Aromatic rice dish with marinated chicken.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/biryani-recipe.jpg",
+    "image": "https://imgs.search.brave.com/4DBGK0rdej-HGx6UOmLrHeJ5lfHjLEyhM80avfXm5KA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/Nzc4ODk5OS9waG90/by90cmFkaXRpb25h/bC1pbmRpYW4taG9t/ZW1hZGUtZWdnLWJp/cnlhbmkuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXJOVGRK/Zk9FREpCbFh5V21j/ZUlvd3M4M1lpamxR/N2EyZzZsejM2dnhO/RWc9",
     "ingredients": [
       { "name": "Basmati Rice", "quantity": "200g" },
       { "name": "Chicken", "quantity": "300g" }
@@ -134,7 +119,7 @@
     "name": "Butter Chicken",
     "type": "non-veg",
     "description": "Creamy tomato gravy with tender chicken pieces.",
-    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/butter-chicken-recipe.jpg",
+    "image": "https://imgs.search.brave.com/KTF9NVOwC9ezDQvkAGQwAoJeyUszadsj5qmVxGw47ck/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9uaWtz/aGFybWFjb29rcy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjIvMTEvQnV0dGVy/Q2hpY2tlbkRTQ181/NjExLTY4M3gxMDI0/LmpwZw",
     "ingredients": [
       { "name": "Chicken", "quantity": "300g" },
       { "name": "Tomato Puree", "quantity": "200ml" }
