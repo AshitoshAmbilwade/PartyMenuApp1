@@ -1,28 +1,49 @@
 import React from 'react';
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, Image } from 'react-native';
 import HeaderBar from '../components/common/HeaderBar';
 import IngredientList from '../components/ingredient/IngredientList';
 import { COLORS } from '../utils/constants';
-import ingredientsData from '../data/ingredients.json';
 import { useRoute } from '@react-navigation/native';
 
 const IngredientScreen = () => {
   const route = useRoute();
-  const { dish } = route.params; // Dish passed from MenuScreen
+  const { dish } = route.params;
 
-  // Find ingredients for this dish (mock data)
-  const dishIngredients = ingredientsData[dish.id] || [];
+  const dishIngredients = dish.ingredients || [];
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header with Back Button */}
-      <HeaderBar showBack={true} />
+      {/* Top Title */}
+      <HeaderBar showBack={true} title="Ingredient list" />
 
-      {/* Dish Info */}
+      {/* Dish Info + Image in one row */}
       <View style={styles.headerSection}>
-        <Text style={styles.title}>{dish.name}</Text>
-        <Text style={styles.description}>{dish.description}</Text>
+        {/* Left Side: Dish info + Ingredients heading */}
+        <View style={styles.leftColumn}>
+          <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">
+            {dish.name}
+          </Text>
+          <Text style={styles.description} numberOfLines={2} ellipsizeMode="tail">
+            {dish.description}
+          </Text>
+
+          {/* Ingredients heading inside the same column */}
+          <View style={styles.ingredientsHeader}>
+            <Text style={styles.ingredientsTitle}>Ingredients</Text>
+            <Text style={styles.servesText}>For {dish.serves} people</Text>
+          </View>
+        </View>
+
+        {/* Right Side: Static Image */}
+        <Image
+          source={require('../assets/image.png')}
+          style={styles.dishImage}
+          resizeMode="cover"
+        />
       </View>
+
+      {/* Separator line */}
+      <View style={styles.separator} />
 
       {/* Ingredients List */}
       <IngredientList ingredients={dishIngredients} />
@@ -39,8 +60,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   headerSection: {
+    flexDirection: 'row',
     marginTop: 10,
     marginBottom: 16,
+    alignItems: 'flex-start',
+  },
+  leftColumn: {
+    flex: 1,
+    paddingRight: 10,
   },
   title: {
     fontSize: 18,
@@ -51,5 +78,30 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.gray,
     marginTop: 4,
+    marginBottom: 8,
+  },
+  dishImage: {
+    width: 165,
+    height: 198,
+    marginLeft: 10,
+  },
+  ingredientsHeader: {
+    marginTop: 50,
+  },
+  ingredientsTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: COLORS.black,
+  },
+  servesText: {
+    fontSize: 14,
+    color: COLORS.gray,
+    marginTop: 2,
+  },
+  separator: {
+    height: 1,
+    backgroundColor: COLORS.gray,
+    opacity: 0.3,
+    marginBottom: 8,
   },
 });

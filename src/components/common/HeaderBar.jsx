@@ -35,31 +35,44 @@ export default HeaderBar;
 
 const styles = StyleSheet.create({
   container: {
+    marginTop:30,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 10,
     backgroundColor: COLORS.white,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
   },
   backButton: {
-    padding: 6,
+    padding: 4,
     borderRadius: 20,
-    backgroundColor: COLORS.lightGray,
+    backgroundColor: 'transparent',
+    marginRight: 8,
   },
   searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: COLORS.lightGray,
-     marginTop: 25,
     flex: 1,
-    borderRadius: 8,
-    paddingHorizontal: 10,
-    height: 40,
+    flexDirection: 'row-reverse', // puts the search icon on the right
+    alignItems: 'center',
+    backgroundColor: COLORS.white,
+    borderWidth: 1,
+    borderColor: '#DADADA',
+    borderRadius: 20,
+    height: 44,
+    paddingHorizontal: 12,
+    marginTop: 0,
+
+    // subtle shadow like the screenshot
+    shadowColor: '#000',
+    shadowOpacity: 0.06,
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 2,
+    elevation: 1,
   },
   searchInput: {
     flex: 1,
-    fontSize: 14,
+    fontSize: 16,
     color: COLORS.black,
+    paddingVertical: 0,
+    paddingRight: 8, // spacing so text doesn't collide with the right icon
   },
 });
 

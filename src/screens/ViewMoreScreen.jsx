@@ -1,17 +1,34 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import { COLORS } from '../utils/constants';
 
 const { height } = Dimensions.get('window');
 
-export default function ViewMoreScreen({ route, navigation, toggleSelect, selectedIds }) {
+export default function ViewMoreScreen({
+  route,
+  navigation,
+  toggleSelect,
+  selectedIds,
+}) {
   const { dish } = route.params;
   const isSelected = selectedIds.includes(dish.id);
+
+  const typeIcon =
+    dish.type?.toLowerCase() === 'veg'
+      ? require('../assets/veg.jpg')
+      : require('../assets/non-veg.webp');
 
   return (
     <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
       <View style={styles.overlay}>
-        {/* Stop click propagation inside the card */}
         <TouchableWithoutFeedback>
           <View style={styles.bottomSheet}>
             {/* Dish Image */}
@@ -19,21 +36,44 @@ export default function ViewMoreScreen({ route, navigation, toggleSelect, select
 
             {/* Dish Info */}
             <View style={styles.infoContainer}>
-              <Text style={styles.title}>{dish.name}</Text>
-              <Text style={styles.subTitle}>North Indian</Text>
-              <Text style={styles.description}>{dish.description}</Text>
+              {/* Title Row */}
+              <View style={styles.titleRow}>
+                <View style={styles.titleLeft}>
+                  <Image source={typeIcon} style={styles.typeIcon} />
+                  <Text style={styles.title}>{dish.name}</Text>
+                </View>
 
-              {/* Actions */}
+                {/* Add/Remove button */}
+                <TouchableOpacity
+                  style={[
+                    styles.button,
+                    isSelected ? styles.removeButton : styles.addButton,
+                  ]}
+                  onPress={() => toggleSelect(dish.id)}
+                >
+                  <Text
+                    style={[
+                      styles.buttonText,
+                      isSelected ? styles.removeText : styles.addText,
+                    ]}
+                  >
+                    {isSelected ? 'Remove' : 'Add'}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              {/* Cuisine + Description */}
+              <Text style={styles.description}>
+                <Text style={styles.cuisine}>{dish.cuisine} </Text>
+                {dish.description}
+              </Text>
+
+              {/* Ingredient Link */}
               <TouchableOpacity
-                style={[styles.button, isSelected ? styles.removeButton : styles.addButton]}
-                onPress={() => toggleSelect(dish.id)}
+                style={styles.ingredientRow}
+                onPress={() => navigation.navigate('Ingredients', { dish })}
               >
-                <Text style={styles.buttonText}>
-                  {isSelected ? 'Remove' : 'Add'}
-                </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity onPress={() => navigation.navigate('Ingredients', { dish })}>
+                <Text style={styles.ingredientIcon}>📜</Text>
                 <Text style={styles.ingredientLink}>Ingredient</Text>
               </TouchableOpacity>
             </View>
@@ -48,13 +88,13 @@ const styles = StyleSheet.create({
   overlay: {
     flex: 1,
     justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.3)', // dim background
+    backgroundColor: 'rgba(0,0,0,0.3)',
   },
   bottomSheet: {
     backgroundColor: COLORS.white,
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
-    padding: 16,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    overflow: 'hidden',
     minHeight: height * 0.45,
     shadowColor: '#000',
     shadowOpacity: 0.2,
@@ -63,48 +103,84 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   image: {
+    margin: 5,
     width: '100%',
-    height: 160,
-    borderRadius: 10,
-    marginBottom: 12,
+    aspectRatio: 2.2,
+    borderTopLeftRadius: 12,
+    borderTopRightRadius: 12,
+    resizeMode: 'cover',
   },
   infoContainer: {
+    padding: 12,
     gap: 6,
   },
+  titleRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  titleLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+  },
+  typeIcon: {
+    width: 16,
+    height: 16,
+    resizeMode: 'contain',
+    marginTop: 2,
+  },
   title: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
     color: COLORS.black,
   },
-  subTitle: {
-    fontSize: 14,
-    color: COLORS.gray,
+  // Button styles same as DishCard
+  button: {
+    paddingHorizontal: 12,
+    paddingVertical: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  addButton: {
+    backgroundColor: '#E6F4EA',
+    borderColor: '#4CAF50',
+  },
+  removeButton: {
+    backgroundColor: '#FDECEA',
+    borderColor: '#FF5A5A',
+  },
+  addText: {
+    color: '#4CAF50',
+  },
+  removeText: {
+    color: '#FF5A5A',
+  },
+  buttonText: {
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  cuisine: {
+    fontWeight: 'bold',
+    color: COLORS.black,
   },
   description: {
     fontSize: 13,
     color: COLORS.gray,
+    lineHeight: 18,
   },
-  button: {
-    paddingVertical: 10,
-    borderRadius: 8,
-    marginTop: 10,
+  ingredientRow: {
+    flexDirection: 'row',
     alignItems: 'center',
+    marginTop: 6,
   },
-  addButton: {
-    backgroundColor: COLORS.primary,
-  },
-  removeButton: {
-    backgroundColor: COLORS.gray,
-  },
-  buttonText: {
-    color: COLORS.white,
+  ingredientIcon: {
     fontSize: 14,
-    fontWeight: '600',
+    marginRight: 4,
   },
   ingredientLink: {
     fontSize: 14,
-    color: COLORS.primary,
-    marginTop: 10,
-    textDecorationLine: 'underline',
+    color: COLORS.orange || '#FFA500',
+    fontWeight: '600',
   },
 });
